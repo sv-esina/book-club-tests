@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Generated Schema",
+  "type": "object",
+  "properties": {
+    "count": {
+      "type": "integer"
+    },
+    "next": {
+      "type": "null"
+    },
+    "previous": {
+      "type": "null"
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "required": [
+    "count",
+    "results"
+  ]
+}
