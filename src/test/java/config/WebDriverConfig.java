@@ -20,7 +20,7 @@ public interface WebDriverConfig extends Config {
     String getBaseURI();
 
     @Key("basePath")
-    @DefaultValue("/api/v1")
+    @DefaultValue("/api/v1/docs/swagger/#")
     String getBasePath();
 
     @Key("browser")

@@ -50,6 +50,7 @@ public class RegistrationTests extends TestBase {
 
             assertThat(registrationResponse.remoteAddr()).matches(IP_ADDRESS_REGEXP);
         });
+
     }
 
     @Test
