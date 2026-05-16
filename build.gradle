@@ -64,3 +64,14 @@ tasks.withType(Test) {
         }
     }
 }
+
+tasks.register('with-tags', Test) {
+    useJUnitPlatform {
+        if (project.hasProperty("includedTags")) {
+            includeTags(project.properties.get("includedTags").toString())
+        }
+        if (project.hasProperty("excludedTags")) {
+            excludeTags(project.properties.get("excludedTags").toString())
+        }
+    }
+}

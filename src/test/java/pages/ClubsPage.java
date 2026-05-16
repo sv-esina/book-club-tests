@@ -9,6 +9,7 @@ import pages.components.CheckReviewCardComponent;
 import java.util.List;
 import java.util.Random;
 
+import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Configuration.baseUrl;
@@ -64,7 +65,7 @@ public class ClubsPage {
 
     @Step("Выполняем поиск по рандомному наименованию клуба")
     public ClubsPage searchRandomClub() {
-        clubNames.shouldHave(CollectionCondition.sizeGreaterThan(0));
+        clubNames.shouldHave(sizeGreaterThan(0));
         int randomIndex = new Random().nextInt(clubNames.texts().size());
         String randomClubName = clubNames.get(randomIndex).getText();
 
